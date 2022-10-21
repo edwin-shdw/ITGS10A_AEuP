@@ -1,0 +1,5 @@
+Aufgabe 3: Min/Max
+
+Entwerfen Sie einen Algorithmus, der nacheinander eine beliebig große Anzahl an Zahlen abfragt und nach der Eingabe der letzten Zahl den größten und den kleinsten Wert ausgibt.
+
+Stellen Sie den Algorithmus mithilfe eines Struktogramms dar.

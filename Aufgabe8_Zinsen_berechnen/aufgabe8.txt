@@ -1,0 +1,3 @@
+Aufgabe 8: Zinsen berechnen
+
+Sie möchten ein Programm schreiben, dass nach Eingabe des Einlagebetrags und des Zinssatzes (p. a.) berechnet, nach wie vielen Monaten sich die Einlage verdoppelt hat. Es soll der exakte Betrag des Einlageguthabens und die Anzahl der Monate ausgegeben werden. Stellen Sie den Algorithmus für das Programm als PAP dar.

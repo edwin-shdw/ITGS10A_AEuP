@@ -1,0 +1,6 @@
+Aufgabe 5: Gehälter Biergarten
+
+Sie betreiben einen Biergarten. Dabei beschäftigen Sie Tellerwäscher und Kellner. Ein Tellerwäscher erhält 9 € in der  Stunde. Ein Kellner erhält 5 € / Std. + 10% von seinem erwirtschafteten Umsatz. Am Abend soll jeder Mitarbeiter
+gemäß seiner Leistung bezahlt werden. Im Programm sollen nacheinander alle Mitarbeiter mit deren  Beschäftigungsart, Stundenanzahl (+ evtl. Umsatz) eingegeben werden. Am Ende, wenn es keinen weiteren Mitarbeiter mehr gibt, sollen die gesamten Personalkosten für diesen Abend ausgegeben werden (die Summe aller Gehälter).
+
+Entwerfen Sie einen Algorithmus zur Berechnung der Gesamtsumme und stellen Sie diesen mithilfe eines Programmablaufplans dar.

@@ -1,0 +1,3 @@
+Aufgabe 7: Ratespiel
+
+Es soll ein Zahlenratespiel als Computerprogramm entwickelt werden. Dabei wird vom Computer eine Zufallszahl zwischen 1 und 200 ermittelt. Anschließend soll der Benutzer versuchen, die Zahl mit so wenig Versuchen wie möglich zu erraten. Solange die Zahl nicht erraten wurde, soll dem Benutzer nach jedem Versuch angezeigt werden, ob die gesuchte Zahl größer oder kleiner als die eingegebene Zahl ist. Sobald die Zahl erraten wurde soll eine entsprechende Erfolgsmeldung und die Anzahl der Rateversuche angezeigt werden. Entwerfen Sie einen Algorithmus für dieses Computerprogramm und stellen Sie diesen als PAP oder Struktogramm dar.

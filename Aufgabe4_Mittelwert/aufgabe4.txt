@@ -1,0 +1,3 @@
+Aufgabe 4: Durchschnitt
+
+Entwerfen Sie einen Algorithmus, der nacheinander eine beliebig große Anzahl an Zahlen vom Benutzer abfragt und nach der Eingabe der letzten Zahl den Durchschnitt der Zahlen ausgibt. Beschreiben Sie den Algorithmus mithilfe eines Programmablaufplans.

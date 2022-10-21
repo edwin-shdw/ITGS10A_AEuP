@@ -1,0 +1,9 @@
+Aufgabe 6: Abbildungsfunktion
+
+Ein Mathematiker hat sich die folgende Abbildungsfunktion für Zahlen ausgedacht.  Er multipliziert die Zahl nacheinander mit den Zahlen von 1 bis 10. Alle geraden Produkte (Ergebnisse der Multiplikation) sollen dabei kumuliert
+(aufsummiert) werden.
+
+Vom 3er-Einmaleins würden also die folgenden fettmarkierten Zahlen summiert werden: 3, 6, 9,
+12, 15, 18, 21, 24, 27, 30. Das Ergebnis wäre 90.
+
+Entwerfen Sie ein Struktogramm oder einen Programmablaufplan für ein Programm, dass eine Zahl vom Benutzer abfragt und dann das Ergebnis der oben abgebildeten Abbildungsfunktion ausgibt.
