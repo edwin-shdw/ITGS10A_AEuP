@@ -1,0 +1,4 @@
+Eine Firma gewährt ihren Angestellten unter folgenden Bedingungen zu Weihnachten eine Prämie: Beträgt das Dienstalter (= Anzahl der Dienstjahre) weniger als ein Jahr, wird keine Prämie gegeben; beträgt es mindestens ein Jahr
+aber weniger als sechs Jahre, besteht die Prämie aus 200 €. Ist der Mitarbeiter sechs oder mehr Jahre bei der Firma, bekommt er 80 € und dazu für jedes Dienstjahr 20 €. Ist er im letzteren Fall außerdem älter als 50 Jahre, so erhält er noch eine Zulage von 50 €.
+
+Stellen Sie den Algorithmus mithilfe eines Struktogramms dar. Zu Beginn sollen die Dienstjahre und das Alter eingegeben werden. Am Ende soll der Algorithmus diekorrekte Prämie ausgeben.
