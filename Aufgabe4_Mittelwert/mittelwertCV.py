@@ -1,5 +1,7 @@
 summe = 0
 anzahl = 0
+# There is no do while in py
+# so this is an emulation
 while True:
     zahl = int(input("Zahl: "))
     summe = summe + zahl
