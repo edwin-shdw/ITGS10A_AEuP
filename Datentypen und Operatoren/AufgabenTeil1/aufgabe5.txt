@@ -1,0 +1,14 @@
+Erzeuge Sie in dem neuen Python-Programm eine
+
+·         boolsche Variable, (z.B. a = True;)
+
+·         ganzzahlige Variable, (z.B. b = 10;)
+
+·         Fließkommavariable und eine (z.B. c = 17.3;)
+
+·         Textvariable (z.B. d = „Das ist ein Text“;)
+
+und fülle die Variablen mit Beispieldaten des jeweiligen Typs. Ermitteln Sie nun mit der Funktion type(...)
+den Typ der Variablen und geben Sie diese Informationen in folgender Form für alle Variablen aus:
+
+Die Variable a hat den Wert 1 und ist vom Typ boolean.

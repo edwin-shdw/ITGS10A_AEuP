@@ -1,0 +1,12 @@
+Schreiben Sie ein Programm, dass die Aufteilung eines Gewinns auf drei Personen (je nach Einsatz) vornimmt.
+Es sollen zunächst die drei Einsätze von Person 1, 2 und 3 abgefragt werden und dann der zu verteilende Gewinn.
+Anschließens soll für die drei Personen der anteilige Gewinn berechnet und ausgegeben werden.
+
+Bsp:
+Einsatz von Person 1 eingeben: 5
+Einsatz von Person 2 eingeben: 50
+Einsatz von Person 3 eingeben: 25
+Bitte den zu verteilenden Gewinn eingeben: 320
+Person 1 erhält: 20.0
+Person 2 erhält: 200.0
+Person 3 erhält: 100.0
