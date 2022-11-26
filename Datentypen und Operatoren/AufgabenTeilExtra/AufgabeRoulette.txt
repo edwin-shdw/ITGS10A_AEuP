@@ -1,0 +1,30 @@
+Ihre Klassenlehrerin plant für den Wandertag einen Ausflug ins Casino. Sie schlägt allen
+Schülerinnen und Schülern die folgende Taktik beim Roulette vor:
+
+Man wählt eine der beiden Farben (schwarz oder rot) und setzt immer auf diese geqählte
+Farbe. Man beginnt mit dem kleinstmöglichen Einsatz. Gewinnt man, setzt man in der
+nächsten Runde wieder den kleinstmöglichen Einsatz. Verliert man in einer Runde,
+verdoppelt man in der nächsten Runde seinen Einsatz. Bei einemerneuten Verlust wird
+wieder verdoppelt. So soll der Verlust der vorherigen Runde wieder ausgeglichen werden.
+
+Euer Klassenleiter informiert euch, dass in dem ausgewählten Casino ein Mindesteinsatz von
+2,00 EUR und ein maximaler Einsatz von 100,00 EUR am Roulette-Tisch möglich ist. Er
+schätzt, dass Sie ungefähr 500 Runden Roulette am Wandertag spielen können.
+
+Schreiben Sie ein Programm, dass diese Roulette-Taktik simuliert. Wählen Sie einen
+bestimmten Betrag (z.B. 25% von Ihrem Nettolohn), den Sie ins Casino mitnehmen wollen.
+Berechnen Sie mithilfe von 500 Durchgängen, wie viel Geld Sie danach haben und berechnen
+Sie Ihren Gewinn/Verlust.
+
+Lagern Sie diese Simulation in eine eigene Funktion aus, der Sie die wichtigsten Parameter
+(Startguthaben, Anzahl Runden, Tisch min und max) übergeben und die das Guthaben nach
+dem Casinobesuch zurückgibt. Lassen Sie die Simulationmithilfe einer Schleife 1000-mal
+durchlaufen und berechnen Sie, in wie vielen Runden es zu einem Totalverlust kommt (in %)
+und wie hoch der durchschnittliche Gewinn/Verlust ist.
+
+Info zum Roulette: Beim Roulette wird eine zufällige Zahl zwischen 0 und 36 gewählt. Die 0
+besitzt die Farbe Grün, auf die nicht gesetzt werden kann. Alle anderen Felder sind entweder
+schwarz oder rot. Gehen Sie zur Vereinfachung aus, dass alle ungeraden Felder rot und alle
+geraden Felder schwarz sind. Haben Sie auf die richtigen Farbe gesetzt, dann bekommen sie
+Ihren Einsatz plus nochmal den gleichen Betrag als Gewinn zurück. Haben Sie auf die falsche
+Farbe gesetzt, verlieren Sie Ihren Einsatz.
