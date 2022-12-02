@@ -20,7 +20,7 @@ def setBets():
         while invalid:
             try:
                 player.setBet(int(input(f"{player.name} set your bet: ")))
-                invalid = player.bet < MIN_BET or player.bet > MAX_BET
+                invalid = player.currentBet < MIN_BET or player.currentBet > MAX_BET
             except: invalid = True
 
 def handOutCards():
@@ -35,17 +35,35 @@ def playerTurn(player):
             print("Black Jack!")
             break
         print(f"{player.name}'s Cards: {player.getCardDeck()} = {player.getCardsSum()}")
-        action = input("Your action? Hit(H) / Stand(S) / Double(D) ")
+        action = input("Your action? Hit(H)  / Stand(S) / Double(D) / Split(Sp)) ")
         if action == 'H': player.hit(takeCard(play_deck))
         elif action == 'D': 
-            player.setBet(player.bet*2)
+            player.setBet(player.currentBet*2)
             player.hit(takeCard(play_deck))
             break
+        elif action == 'Sp':
+            if len(player.cards) == 2 and player.cards[0].index == player.cards[1].index:
+                list_index = getIndex(players, player)+1
+                players.insert(list_index, BlackJackPlayer(f'{player.name}Split', player.currentBet, 0))
+                players[list_index].hit(player.cards[1])
+                splits.append(players[list_index])
+                player.cards.remove(player.cards[1])
         else: break
         player.checkAce()
         if player.checkBust():
             print(f"{player.name} lost. ({player.getCardsSum()})")
             player.busted()
+
+def mergeSplits(players, splits):
+    for split in splits:
+        for player in players:
+            if split.name == f"{player.name}Split":
+                player.capital += split.capital
+                if split in players: players.remove(split)
+
+def clearSplits():
+    for split in splits:
+        if split in splits: splits.remove(split)
 
 def dealerTurn(dealer):
     while dealer.getCardsSum() < 17:
@@ -60,12 +78,17 @@ def checkWin(dealer, player):
 
 def checkDeck(deck):
     if len(deck) <= (len(players) + 1) * 5:
-        deck = creatBlackJackDeck() * CARD_DECKS_USED
-        input("RESHUFFLED")
+        deck = createBlackJackDeck() * CARD_DECKS_USED
+
+def getIndex(list, element):
+    for i in range(len(list)):
+        if element == list[i]:
+            return i
 
 
 # ---------- MAIN ----------
-play_deck = creatBlackJackDeck() * CARD_DECKS_USED
+play_deck = createBlackJackDeck() * CARD_DECKS_USED
+splits = []
 dealer = BlackJackPlayer('Dealer')
 players = []
 player_amount = int(input(f"Amount of player ({MIN_PLAYER_AMOUNT} - {MAX_PLAYER_AMOUNT}): "))
@@ -93,11 +116,17 @@ while next_round:
         for player in players:
             player.lostBet()
         
+    mergeSplits(players, splits)
+
     print(f"Dealers Cards: {dealer.getCardDeck()} = {dealer.getCardsSum()}")
-    for player in players:
+    for i, player in enumerate(players):
         print(f"{player.name}'s Cards: {player.getCardDeck()} = {player.getCardsSum()}")
-        print(f"{player.name}'s cap: {player.capital}")
+        for split in splits:
+            if f'{player.name}Split' == split.name:
+                print(f"{split.name}'s Cards: {split.getCardDeck()} = {split.getCardsSum()}")
+        print(f"{player.name}'s cap: {player.capital}\n")
+    clearSplits()
     
     next_round = (input("Next round? (Y / N) ") == 'Y')
 
-# TODO: add action split
+# TODO: feat-test splitting

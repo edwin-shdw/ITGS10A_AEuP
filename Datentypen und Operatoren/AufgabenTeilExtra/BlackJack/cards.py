@@ -30,9 +30,19 @@ def takeCard(deck):
     deck.remove(rand_card)
     return rand_card
 
-def creatBlackJackDeck():
+def createBlackJackDeck():
     deck = []
     for icon in CARD_ICONS:
         for index in CARD_INDEXES:
             deck.append(BlackJackCard(icon, index))
     return deck
+
+
+# ========== for development ==========
+def createTestDeck():
+    deck = []
+    for icon in CARD_ICONS:
+        for index in CARD_INDEXES[7:9]:
+            deck.append(BlackJackCard(icon, index))
+    return deck
+    

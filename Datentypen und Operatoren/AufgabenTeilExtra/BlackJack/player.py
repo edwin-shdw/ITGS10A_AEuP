@@ -1,9 +1,9 @@
 class Player:
-    def __init__(self, name, bet, cards = []):
+    def __init__(self, name, bet, capital = 1000):
         self.name = name
-        self.cards = cards
+        self.cards = []
         self.currentBet = bet
-        self.capital = 1000
+        self.capital = capital
 
     def hit(self, card):
         self.cards.append(card)
@@ -24,17 +24,17 @@ class Player:
         return(arr)
 
     def setBet(self, bet):
-        self.bet = bet
+        self.currentBet = bet
 
     def lostBet(self):
-        self.capital -= self.bet
+        self.capital -= self.currentBet
 
     def wonBet(self):
-        self.capital += self.bet
+        self.capital += self.currentBet
 
 class BlackJackPlayer(Player):
-    def __init__(self, name, cards=[]):
-        Player.__init__(self, name, cards)
+    def __init__(self, name, bet=0, capital = 1000):
+        Player.__init__(self, name, bet, capital)
         self.bust = False
         self.blackJack = False
 
@@ -58,3 +58,4 @@ class BlackJackPlayer(Player):
         self.cards = []
         self.bust = False
         self.blackJack = False
+        
