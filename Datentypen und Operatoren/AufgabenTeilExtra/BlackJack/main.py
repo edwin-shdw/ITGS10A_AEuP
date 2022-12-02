@@ -43,16 +43,20 @@ def playerTurn(player):
             break
         elif action == 'Sp':
             if len(player.cards) == 2 and player.cards[0].index == player.cards[1].index:
-                list_index = getIndex(players, player)+1
-                players.insert(list_index, BlackJackPlayer(f'{player.name}Split', player.currentBet, 0))
-                players[list_index].hit(player.cards[1])
-                splits.append(players[list_index])
-                player.cards.remove(player.cards[1])
+                playerSplits(player)
+            else: print("Can't split your current deck")
         else: break
         player.checkAce()
         if player.checkBust():
             print(f"{player.name} lost. ({player.getCardsSum()})")
             player.busted()
+
+def playerSplits(player):
+    list_index = getIndex(players, player)+1
+    players.insert(list_index, BlackJackPlayer(f'{player.name}Split', player.currentBet, 0))
+    players[list_index].hit(player.cards[1])
+    splits.append(players[list_index])
+    player.cards.remove(player.cards[1])
 
 def mergeSplits(players, splits):
     for split in splits:
